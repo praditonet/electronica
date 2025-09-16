@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicStream - Tu música favorita</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎵 Music VIP</h1>
+            <p class="subtitle">Descubre, escucha y comparte tu música favorita</p>
+        </header>
+
+        <div class="tabs">
+            <button class="tab active" onclick="showSection('albums')">Álbumes</button>
+            <button class="tab" onclick="showSection('trending')">Trending</button>
+            <button class="tab" onclick="showSection('genres')">Géneros</button>
+        </div>
+
+        <div id="albums" class="content-section active">
+            <h2 style="margin-bottom: 20px;">🔥 Álbumes Populares</h2>
+            <div class="albums-grid" id="albumsGrid">
+                <!-- Los álbumes se generarán dinámicamente -->
+            </div>
+        </div>
+
+        <div id="trending" class="content-section">
+            <h2 style="margin-bottom: 20px;">📈 Tendencias del Momento</h2>
+            <div class="trending-list" id="trendingList">
+                <!-- Las tendencias se generarán dinámicamente -->
+            </div>
+        </div>
+
+        <div id="genres" class="content-section">
+            <h2 style="margin-bottom: 20px;">🎭 Explora por Géneros</h2>
+            <div class="genres-grid" id="genresGrid">
+                <!-- Los géneros se generarán dinámicamente -->
+            </div>
+        </div>
+    </div>
+
+    <div class="player" id="player" style="display: none;">
+        <div class="now-playing">
+            <div class="now-playing-cover" id="playerCover">🎵</div>
+            <div>
+                <div class="song-title" id="playerTitle">Selecciona una canción</div>
+                <div class="song-artist" id="playerArtist">Artista</div>
+            </div>
+        </div>
+        <div class="player-controls">
+            <button class="control-btn" onclick="previousSong()">⏮️</button>
+            <button class="control-btn" id="playPauseBtn" onclick="togglePlay()">▶️</button>
+            <button class="control-btn" onclick="nextSong()">⏭️</button>
+            <button class="control-btn" onclick="toggleLike()" id="likeBtn">🤍</button>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
